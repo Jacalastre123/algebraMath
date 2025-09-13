@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra</title>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jersey+10&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <style>
+
+            body {
+                font-family: open sans;
+                background-color: rgba(92, 165, 237, 0.616)
+            }
+
+            div {
+                background-image: linear-gradient(rgba(255,255,255,0.3), rgba(200,200,200,0.5));
+                border-radius: 30px;
+                padding: 10px;
+                box-shadow: 4px 4px 10px 3px black;
+            }
+            </style>
+</head>
+<body>
+    <div>
+    <h1>Algebra Quiz</h1>
+    <h2>For Year 6-9</h2>
+    <p>If the screen goes green, then it is correct as red means incorrect. This algebra is a tougher one and calculator is recommended. <strong>The answer is rounded to two decimal places.</strong></p>
+
+    <h3 id="question"></h3>
+    <form>
+       <label for="ans">x = </label> <input id="ans" type="number">
+    </form><br/>
+    <button id="submit" onclick="subbing()">Submit</button>
+
+    <p id="solved">[Loading]</p>
+    <p id="percent">Percentage Solved: 0%</p>
+    </div>
+    <br/>
+
+    <button onclick="clips()" id="clipes">Embed Code</button>
+    <script>
+        const question = document.getElementById("question")
+        const ans = document.getElementById("ans")
+        const submit = document.getElementById("submit")
+        const percent = document.getElementById("percent")
+        const solved = document.getElementById("solved")
+        const clipes = document.getElementById("clipes")
+
+        let num = Math.floor((Math.random() * 10) + 1)
+        let num2 = Math.floor((Math.random() * 55) + 1)
+        let num3 = Math.floor((Math.random() * 100) + 1)
+        let correct = ((num3 - num2) / num).toFixed(2)
+
+        let solves = 0
+        let tries = 0
+        let percentage = 0
+                  if (tries > 0) {
+        percentage = (solves / tries) * 100
+        }
+
+else {
+    percentage = 0
+}
+        solved.innerHTML = "Solved/Tried: " + solves + "/" + tries
+        question.innerHTML = num + "x + " + num2 + " = " + num3
+        function subbing() {
+      
+          
+        if (ans.value === correct) {
+            solves++
+            tries++
+            document.body.style.backgroundColor = "green"
+            const good = setTimeout(function() {
+                document.body.style.backgroundColor = "rgba(92, 165, 237, 0.616)"
+                clearInterval(good)
+            }, 650)
+
+             num = Math.floor((Math.random() * 15) + 1)
+        num2 = Math.floor((Math.random() * 40) + 1)
+        num3 = Math.floor((Math.random() * 40) + 1)
+        correct = ((num3 - num2) / num).toFixed(2)
+          question.innerHTML = num + "x + " + num2 + " = " + num3
+                                  if (tries > 0) {
+        percentage = (solves / tries) * 100
+        }
+
+else {
+    percentage = 0
+}
+         
+        }
+
+            
+
+    else {
+            tries++
+            document.body.style.backgroundColor = "red"
+            const ends = setTimeout(function() {
+                document.body.style.backgroundColor = "rgba(92, 165, 237, 0.616)"
+                clearTimeout(ends)
+            }, 650)
+                   
+        }
+         solved.innerHTML = "Solved/Tried: " + solves + "/" + tries
+                    percent.innerHTML = "Percentage Solved: " + percentage + "%"
+                  if (tries > 0) {
+        percentage = (solves / tries) * 100
+        }
+
+else {
+    percentage = 0
+}
+         
+       
+    }
+
+        console.log(correct)
+        function clips() {
+            navigator.clipboard.writeText("<iframe src='https://jacalastre123.github.io/algebraMath' height='350' width='90' style='overflow: hidden;'></iframe>")
+            clipes.innerHTML = "Copied"
+            const clipping = setTimeout(function() {
+                clipes.innerHTML = "Embed Code"
+                clearTimeout(clipping)
+            }, 2000)
+        }
+       
+    </script>
+</body>
+</html>

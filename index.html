@@ -20,6 +20,22 @@
                 padding: 10px;
                 box-shadow: 4px 4px 10px 3px black;
             }
+
+            button {
+                background-color: white;
+                border-radius: 7px;
+                padding: 3px;
+                border-color: grey;
+                
+            }
+
+            button:hover {
+                background-color: lightgrey;
+            }
+
+            button:active {
+                background-color: grey;
+            }
             </style>
 </head>
 <body>
@@ -34,7 +50,7 @@
     </form><br/>
     <button id="submit" onclick="subbing()">Submit</button>
 
-    <p id="solved">[Loading]</p>
+    <p id="solved">Solved/Tried: 0/0</p>
     <p id="percent">Percentage Solved: 0%</p>
     </div>
     <br/>

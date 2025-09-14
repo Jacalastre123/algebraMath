@@ -69,8 +69,9 @@
         let corrects = Math.floor(Math.random() * 11) 
         let num1 = Math.floor(Math.random() * 10)
         let num2 = Math.floor(Math.random() * 20)
-        let rhs = num1 * correct + num2
+        
         let correct = corrects * num1 + num2 
+        let rhs = num1 * correct + num2
         let answer = num1 + "x + " + num2 + " = " + rhs
         
         let solves = 0
@@ -103,8 +104,9 @@ else {
         let corrects = Math.floor(Math.random() * 11) 
         let num1 = Math.floor(Math.random() * 10)
         let num2 = Math.floor(Math.random() * 20)
-        let rhs = num1 * correct + num2
+       
         let solution = corrects * num1 + num2 
+             let rhs = num1 * correct + num2
         let answer = num1 + "x + " + num2 + " = " + rhs
           question.innerHTML = answer
                                   if (tries > 0) {

@@ -66,9 +66,9 @@
         const solved = document.getElementById("solved")
         const clipes = document.getElementById("clipes")
 
-        let corrects = Math.floor(Math.random() * 11) 
-        let num1 = Math.floor(Math.random() * 10)
-        let num2 = Math.floor(Math.random() * 20)
+        let corrects = Math.floor(Math.random() * 11) + 1
+        let num1 = Math.floor(Math.random() * 10) + 1
+        let num2 = Math.floor(Math.random() * 20) + 1
         
         let correct = corrects * num1 + num2 
         let rhs = num1 * correct + num2

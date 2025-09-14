@@ -100,15 +100,18 @@ else {
                 clearInterval(good)
             }, 650)
 
+                 if (tries > 0) {
+        percentage = (solves / tries) * 100
+        }
+
              
-        corrects = Math.floor(Math.random() * 11) 
-         num1 = Math.floor(Math.random() * 10)
-         num2 = Math.floor(Math.random() * 20)
-       
-        solution = corrects * num1 + num2 
-             rhs = num1 * correct + num2
-            correct = corrects
-       answer = num1 + "x + " + num2 + " = " + rhs
+       corrects = Math.floor(Math.random() * 11) + 1
+        num1 = Math.floor(Math.random() * 10) + 1
+        num2 = Math.floor(Math.random() * 20) + 1
+        
+        correct = corrects
+        rhs = num1 * correct + num2
+        answer = num1 + "x + " + num2 + " = " + rhs
           question.innerHTML = answer
                                   if (tries > 0) {
         percentage = (solves / tries) * 100
@@ -129,7 +132,9 @@ else {
                 document.body.style.backgroundColor = "rgba(92, 165, 237, 0.616)"
                 clearTimeout(ends)
             }, 650)
-                   
+                        if (tries > 0) {
+        percentage = (solves / tries) * 100
+        }
         }
          solved.innerHTML = "Solved/Tried: " + solves + "/" + tries
                     percent.innerHTML = "Percentage Solved: " + percentage + "%"

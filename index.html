@@ -70,7 +70,7 @@
         let num1 = Math.floor(Math.random() * 10) + 1
         let num2 = Math.floor(Math.random() * 20) + 1
         
-        let correct = corrects * num1 + num2 
+        let correct = corrects
         let rhs = num1 * correct + num2
         let answer = num1 + "x + " + num2 + " = " + rhs
         
@@ -107,6 +107,7 @@ else {
        
         solution = corrects * num1 + num2 
              rhs = num1 * correct + num2
+            correct = corrects
        answer = num1 + "x + " + num2 + " = " + rhs
           question.innerHTML = answer
                                   if (tries > 0) {

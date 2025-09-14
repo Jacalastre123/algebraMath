@@ -87,7 +87,7 @@ else {
     percentage = 0
 }
         solved.innerHTML = "Solved/Tried: " + solves + "/" + tries
-        question.innerHTML = num + "x + " + num2 + " = " + num3
+        question.innerHTML = answer
         function subbing() {
       
           
@@ -101,13 +101,13 @@ else {
             }, 650)
 
              
-        let corrects = Math.floor(Math.random() * 11) 
-        let num1 = Math.floor(Math.random() * 10)
-        let num2 = Math.floor(Math.random() * 20)
+        corrects = Math.floor(Math.random() * 11) 
+         num1 = Math.floor(Math.random() * 10)
+         num2 = Math.floor(Math.random() * 20)
        
-        let solution = corrects * num1 + num2 
-             let rhs = num1 * correct + num2
-        let answer = num1 + "x + " + num2 + " = " + rhs
+        solution = corrects * num1 + num2 
+             rhs = num1 * correct + num2
+       answer = num1 + "x + " + num2 + " = " + rhs
           question.innerHTML = answer
                                   if (tries > 0) {
         percentage = (solves / tries) * 100
